@@ -4,7 +4,8 @@
   --light-color-h1: #223344;
   --light-color-link: #3388cc;
   --light-color-date: rgba(34, 51, 68, 0.75);
-  --light-color-line: rgba(0, 59, 137, 0.25);
+  --light-color-line-rgb: 0, 59, 137;
+  --light-color-line: rgba(var(--light-color-line-rgb), 0.25);
   --light-color-bullet: rgba(0, 59, 137, 0.35);
   --light-color-arrow: rgba(0, 59, 137, 0.35);
   --light-image-filter: none;
@@ -20,7 +21,8 @@
   --dark-color-h1: #ffffff;
   --dark-color-link: #5ea7ff;
   --dark-color-date: #5e6d79;
-  --dark-color-line: rgba(51, 102, 153, 0.25);
+  --dark-color-line-rgb: 51, 102, 153;
+  --dark-color-line: rgba(var(--dark-color-line-rgb), 0.25);
   --dark-color-bullet: #3f4c59;
   --dark-color-arrow: #3f4c59;
   --dark-image-filter: grayscale(20%);
@@ -36,6 +38,7 @@
   --color-h1: var(--light-color-h1);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
+  --color-line-rgb: var(--light-color-line-rgb);
   --color-line: var(--light-color-line);
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
@@ -50,6 +53,7 @@
     --color-h1: var(--dark-color-h1);
     --color-link: var(--dark-color-link);
     --color-date: var(--dark-color-date);
+    --color-line-rgb: var(--dark-color-line-rgb);
     --color-line: var(--dark-color-line);
     --color-bullet: var(--dark-color-bullet);
     --color-arrow: var(--dark-color-arrow);
@@ -65,6 +69,7 @@
   --color-h1: var(--light-color-h1);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
+  --color-line-rgb: var(--light-color-line-rgb);
   --color-line: var(--light-color-line);
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
@@ -79,6 +84,7 @@
   --color-h1: var(--dark-color-h1);
   --color-link: var(--dark-color-link);
   --color-date: var(--dark-color-date);
+  --color-line-rgb: var(--dark-color-line-rgb);
   --color-line: var(--dark-color-line);
   --color-bullet: var(--dark-color-bullet);
   --color-arrow: var(--dark-color-arrow);
@@ -94,6 +100,7 @@
     --color-h1: black;
     --color-link: black;
     --color-date: black;
+    --color-line-rgb: 0, 0, 0;
     --color-line: black;
     --color-bullet: black;
     --color-arrow: black;

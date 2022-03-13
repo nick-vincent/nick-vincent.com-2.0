@@ -21,6 +21,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  body {
+    padding: 4em 1em;
+  }
+}
+
 body::before,
 body::after {
   content: '';
