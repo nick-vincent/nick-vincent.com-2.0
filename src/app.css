@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --color-white: rgba(255, 255, 255, 0.9);
+  --color-black: rgba(0, 0, 0, 0.9);
+  --filter-gray: grayscale(20%);
+
+  --color-text: var(--color-black);
+  --color-background: var(--color-white);
+  --color-line: rgba(0, 0, 0, 0.25);
+  --color-transition: 1s ease;
+
+  --image-filter: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--color-white);
+    --color-background: var(--color-black);
+    --color-line: rgba(255, 255, 255, 0.25);
+    --image-filter: var(--filter-gray);
+  }
+}
+
+@media print {
+  :root {
+    --color-text: black;
+    --color-background: white;
+    --color-line: black;
+    --image-filter: none;
+  }
+}
+
+.light {
+  --color-text: var(--color-black);
+  --color-background: var(--color-white);
+  --color-line: rgba(0, 0, 0, 0.25);
+  --image-filter: none;
+}
+
+.dark {
+  --color-text: var(--color-white);
+  --color-background: var(--color-black);
+  --color-line: rgba(255, 255, 255, 0.25);
+  --image-filter: var(--filter-gray);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  padding: 1em;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color var(--color-transition), background-color var(--color-transition);
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
+}
+
+p,
+ul {
+  margin: 0 0 1em 0;
+}
+
+ul {
+  display: block;
+  padding: 0;
+  list-style: none;
+}
+
+li::before {
+  content: '\2022';
+  display: inline-block;
+  width: 1em;
+}
+
+a {
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  outline: none;
+  transition: color var(--color-transition);
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  transition: color var(--color-transition);
+}
+
+img {
+  filter: var(--image-filter);
+  transition: filter var(--color-transition);
+}

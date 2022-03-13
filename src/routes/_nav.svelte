@@ -19,4 +19,17 @@
 </nav>
 
 <style>
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+  }
+
+  li {
+    display: block;
+  }
+
+  li::before {
+    display: none;
+  }
 </style>
