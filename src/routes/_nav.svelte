@@ -14,12 +14,12 @@
 <header>
   <nav>
     <ul>
-      <li class="home" class:isHome>
+      <li class="home" class:active={$page.url.pathname === '/'}>
         <a sveltekit:prefetch href="/">Nick Vincent</a>
       </li>
       {#each navItems as item}
         <li>
-          <a sveltekit:prefetch href={item.href} class:active={item.href === $page.url.pathname}
+          <a sveltekit:prefetch href={item.href} class:active={$page.url.pathname === item.href}
             >{item.text}</a
           >
         </li>
@@ -86,13 +86,13 @@
     visibility: hidden;
     font-weight: 700;
     color: var(--color-h1);
-    transform: scale(0.9);
+    transform: scale(0.95);
     transform-origin: center;
     transition: transform var(--duration) var(--easing), opacity var(--duration) var(--easing),
       visibility var(--duration) var(--easing), var(--dom-x-ray-transition);
   }
 
-  .home:not(.isHome) a {
+  .home:not(.active) a {
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
@@ -123,8 +123,8 @@
       transform: scale(1.1);
     }
 
-    .home:not(.isHome) a:hover,
-    .home:not(.isHome) a:focus-visible {
+    .home:not(.active) a:hover,
+    .home:not(.active) a:focus-visible {
       opacity: 1;
       transform: scale(1.05);
     }
