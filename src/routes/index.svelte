@@ -11,3 +11,9 @@
     >the.nick.vincent@gmail.com</a
   >
 </p>
+
+<style>
+  p {
+    margin: 0;
+  }
+</style>

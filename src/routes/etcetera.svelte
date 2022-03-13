@@ -7,7 +7,8 @@
   $: switchTheme = theme === 'dark' ? 'light' : 'dark';
 
   afterUpdate(() => {
-    document.documentElement.className = theme; // "dark" or "light"
+    document.documentElement.classList.add(theme);
+    document.documentElement.classList.remove(switchTheme);
   });
 </script>
 
@@ -25,7 +26,9 @@
     href="https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj"
     rel="external"
     target="_blank">DOM X-Ray</a
-  >, a dev tool to see through the DOM.
+  ><br />
+  a dev tool to see<br />
+  through the DOM
 </p>
 
 <p>I’m also known to:</p>
@@ -63,7 +66,10 @@
 
 <p>While you’re here, you can:</p>
 <ul>
-  <li><button>demo DOM X-Ray</button></li>
+  <li>
+    <button on:click={() => document.documentElement.classList.toggle('dom-x-ray')}
+      >demo DOM X-Ray</button
+    >
+  </li>
   <li><button on:click={() => (theme = switchTheme)}>toggle dark mode</button></li>
-  <li><button>print this page</button></li>
 </ul>

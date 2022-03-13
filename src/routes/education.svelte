@@ -6,13 +6,15 @@
 <h1>Education</h1>
 
 <h2>
-  <a href="https://www.unlv.edu" rel="external" target="_blank">University of Nevada, Las Vegas</a>
+  <a href="https://www.unlv.edu" rel="external" target="_blank"
+    >University of Nevada, Las&nbsp;Vegas</a
+  >
 </h2>
-<p>Bachelor of Arts in Computer Science</p>
-<p>Dec 2005</p>
+<p>Bachelor of Arts in Computer&nbsp;Science</p>
+<p class="date">Dec 2005</p>
 
 <h2>
-  <a href="https://www.csn.edu" rel="external" target="_blank">College of Southern Nevada</a>
+  <a href="https://www.csn.edu" rel="external" target="_blank">College of Southern&nbsp;Nevada</a>
 </h2>
-<p>Associate of Applied Science in Web Design</p>
-<p>Dec 2003</p>
+<p>Associate of Applied Science in&nbsp;Web&nbsp;Design</p>
+<p class="date">Dec 2003</p>
