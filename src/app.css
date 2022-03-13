@@ -20,7 +20,7 @@
   --light-gradient-opacity: 0;
   --light-gradient-bg: radial-gradient(
     circle farthest-corner at top center,
-    var(--light-color-bg) 50%,
+    var(--light-color-bg) 0,
     #b0c0f0 100%
   );
 
@@ -35,8 +35,8 @@
   --dark-image-filter: grayscale(20%);
   --dark-gradient-opacity: 0;
   --dark-gradient-bg: radial-gradient(
-    circle farthest-corner at top center,
-    var(--dark-color-bg) 50%,
+    circle farthest-corner at bottom center,
+    var(--dark-color-bg) 0,
     #080b10 100%
   );
 
