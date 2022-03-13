@@ -1,23 +1,13 @@
 <script>
-  import { afterUpdate } from 'svelte';
-  import DarkMode from 'svelte-dark-mode';
   import PageTransition from './_page_transition.svelte';
+  import { theme } from './_stores.js';
 
-  let theme = 'light';
-
-  $: switchTheme = theme === 'dark' ? 'light' : 'dark';
-
-  afterUpdate(() => {
-    document.documentElement.classList.add(theme);
-    document.documentElement.classList.remove(switchTheme);
-  });
+  $: switchTheme = $theme === 'dark' ? 'light' : 'dark';
 </script>
 
 <svelte:head>
   <title>Nick Vincent: Etcetera</title>
 </svelte:head>
-
-<DarkMode bind:theme />
 
 <PageTransition>
   <h1>Etcetera</h1>
@@ -77,6 +67,6 @@
         >demo DOM X-Ray</button
       >
     </li>
-    <li><button on:click={() => (theme = switchTheme)}>toggle dark mode</button></li>
+    <li><button on:click={() => ($theme = switchTheme)}>toggle dark mode</button></li>
   </ul>
 </PageTransition>
