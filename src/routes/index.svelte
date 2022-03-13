@@ -7,7 +7,9 @@
 </svelte:head>
 
 <PageTransition>
-  <img alt="Nick Vincent" src="/nick-vincent.jpg" width="640" height="640" />
+  <a href="/nick-vincent.jpg" class="image-link" target="_blank"
+    ><img alt="Nick Vincent" src="/nick-vincent.jpg" width="640" height="640" /></a
+  >
   <h1>Nick Vincent</h1>
   <p>
     Fluent in both design&nbsp;&&nbsp;code<br />
@@ -24,10 +26,29 @@
   }
 
   img {
-    display: block;
-    width: calc(50% - 0.5em);
+    display: inline-block;
+    width: 8em;
     height: auto;
-    margin-bottom: 0.5em;
     border-radius: 50%;
+  }
+
+  .image-link {
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.05s;
+  }
+
+  .image-link::after {
+    display: none;
+  }
+
+  .image-link:focus {
+    transform: translate3d(0, 0, 0) scale(1.05) rotate(15deg);
+  }
+
+  @media (hover: hover) {
+    .image-link:hover {
+      transform: translate3d(0, 0, 0) scale(1.05) rotate(15deg);
+    }
   }
 </style>
