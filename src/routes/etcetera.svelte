@@ -1,6 +1,6 @@
 <script>
   import PageTransition from './_page_transition.svelte';
-  import { theme } from './_stores.js';
+  import { theme } from '../js/stores.js';
 
   $: switchTheme = $theme === 'dark' ? 'light' : 'dark';
 </script>
