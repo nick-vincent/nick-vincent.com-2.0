@@ -25,8 +25,7 @@
     href="https://chrome.google.com/webstore/detail/dom-x-ray/olfkgegmjhgehnakignkabhbdchkhnkj"
     rel="external"
     target="_blank">DOM X-Ray</a
-  >
-  a dev tool to see through the DOM.
+  >, a dev tool to see through the DOM.
 </p>
 
 <p>I’m also known to:</p>
@@ -48,7 +47,7 @@
 <p>This webpage features:</p>
 <ul>
   <li>
-    <a href="https://svelte.dev" rel="external" target="_blank">Svelte</a>
+    <a href="https://svelte.dev" rel="external" target="_blank">svelte</a>
   </li>
   <li>
     <a href="https://css-tricks.com/snippets/css/system-font-stack/" rel="external" target="_blank"
