@@ -1,7 +1,22 @@
+<script>
+  import { afterUpdate } from 'svelte';
+  import DarkMode from 'svelte-dark-mode';
+
+  let theme = 'light';
+
+  $: switchTheme = theme === 'dark' ? 'light' : 'dark';
+
+  afterUpdate(() => {
+    document.documentElement.className = theme; // "dark" or "light"
+  });
+</script>
+
 <svelte:head>
   <title>Nick Vincent: Etcetera</title>
   <meta name="description" content="Fluent in design and code" />
 </svelte:head>
+
+<DarkMode bind:theme />
 
 <h1>Etcetera</h1>
 
@@ -50,6 +65,6 @@
 <p>While you’re here, you can:</p>
 <ul>
   <li><button>demo DOM X-Ray</button></li>
-  <li><button>toggle dark mode</button></li>
+  <li><button on:click={() => (theme = switchTheme)}>toggle dark mode</button></li>
   <li><button>print this page</button></li>
 </ul>
