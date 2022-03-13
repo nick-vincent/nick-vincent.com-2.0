@@ -47,14 +47,6 @@ button:focus-visible::after {
   }
 }
 
-@media (hover: none) {
-  a::after,
-  button::after {
-    opacity: 1;
-    transform: translateX(0.15em);
-  }
-}
-
 @media print {
   a::after,
   button::after {
