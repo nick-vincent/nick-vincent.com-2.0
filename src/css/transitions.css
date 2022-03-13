@@ -1,0 +1,18 @@
+:root {
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --color-transition: 1s var(--easing-standard);
+  --arrow-transition-duration: 0.2s;
+  --dom-x-ray-transition: color var(--color-transition), border-color var(--color-transition),
+    background-color var(--color-transition), outline-color var(--color-transition);
+}
+
+html:not(.loaded),
+html:not(.loaded):before,
+html:not(.loaded):after,
+html:not(.loaded) *,
+html:not(.loaded) *:before,
+html:not(.loaded) *:after {
+  transition: none !important;
+}

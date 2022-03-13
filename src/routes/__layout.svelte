@@ -3,7 +3,7 @@
   import DarkMode from 'svelte-dark-mode';
   import Nav from './_nav.svelte';
   import { theme } from '../js/stores.js';
-  import '../app.css';
+  import '../css/app.css';
 
   $: switchTheme = $theme === 'dark' ? 'light' : 'dark';
 
