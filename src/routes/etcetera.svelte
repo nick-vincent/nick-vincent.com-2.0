@@ -33,11 +33,7 @@
 <p>This webpage features:</p>
 <ul>
   <li>
-    <a
-      href="https://css-tricks.com/snippets/css/complete-guide-grid/"
-      rel="external"
-      target="_blank">CSS grids</a
-    >
+    <a href="https://svelte.dev" rel="external" target="_blank">Svelte</a>
   </li>
   <li>
     <a href="https://css-tricks.com/snippets/css/system-font-stack/" rel="external" target="_blank"
