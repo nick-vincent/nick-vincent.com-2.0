@@ -11,20 +11,22 @@
   $: isHome = $page.url.pathname === '/' ? true : false;
 </script>
 
-<nav>
-  <ul>
-    <li class="home" class:isHome>
-      <a sveltekit:prefetch href="/">Nick Vincent</a>
-    </li>
-    {#each navItems as item}
-      <li>
-        <a sveltekit:prefetch href={item.href} class:active={item.href === $page.url.pathname}
-          >{item.text}</a
-        >
+<header>
+  <nav>
+    <ul>
+      <li class="home" class:isHome>
+        <a sveltekit:prefetch href="/">Nick Vincent</a>
       </li>
-    {/each}
-  </ul>
-</nav>
+      {#each navItems as item}
+        <li>
+          <a sveltekit:prefetch href={item.href} class:active={item.href === $page.url.pathname}
+            >{item.text}</a
+          >
+        </li>
+      {/each}
+    </ul>
+  </nav>
+</header>
 
 <style>
   nav {

@@ -55,6 +55,7 @@
   --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
   --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
   --color-transition: 1s var(--easing-standard);
+  --arrow-transition-duration: 0.2s;
 
   --dom-x-ray-transition: color var(--color-transition), border-color var(--color-transition),
     background-color var(--color-transition), outline-color var(--color-transition);
@@ -137,6 +138,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', sans-serif;
   font-size: 24px;
+  font-size: clamp(21px, 6vw, 24px);
   line-height: 1.5em;
   font-weight: 300;
 }
@@ -247,25 +249,26 @@ button::after {
   font-weight: 300;
   color: var(--color-arrow);
   opacity: 0;
-  transform: translateX(-0.2em);
-  transition: opacity 0.1s var(--easing-accelerate), transform 0.1s var(--easing-accelerate),
-    var(--dom-x-ray-transition);
+  transform: translateX(-0.15em);
+  transition: opacity var(--arrow-transition-duration) var(--easing-accelerate),
+    transform var(--arrow-transition-duration) var(--easing-accelerate), var(--dom-x-ray-transition);
 }
 
 a:focus-visible::after,
 button:focus-visible::after {
   opacity: 1;
-  transform: translateX(0.1em);
-  transition: opacity 0.1s var(--easing-decelerate), transform 0.1s var(--easing-decelerate),
-    var(--dom-x-ray-transition);
+  transform: translateX(0.15em);
+  transition: opacity var(--arrow-transition-duration) var(--easing-decelerate),
+    transform var(--arrow-transition-duration) var(--easing-decelerate), var(--dom-x-ray-transition);
 }
 
 @media (hover: hover) {
   a:hover::after,
   button:hover::after {
     opacity: 1;
-    transform: translateX(0.1em);
-    transition: opacity 0.1s var(--easing-decelerate), transform 0.1s var(--easing-decelerate),
+    transform: translateX(0.15em);
+    transition: opacity var(--arrow-transition-duration) var(--easing-decelerate),
+      transform var(--arrow-transition-duration) var(--easing-decelerate),
       var(--dom-x-ray-transition);
   }
 }
