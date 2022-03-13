@@ -1,6 +1,6 @@
 <script>
   const navItems = [
-    { text: 'Home', href: '/' },
+    { text: 'Nick Vincent', href: '/' },
     { text: 'Expertise', href: '/expertise/' },
     { text: 'Experience', href: '/experience/' },
     { text: 'Education', href: '/education/' },
