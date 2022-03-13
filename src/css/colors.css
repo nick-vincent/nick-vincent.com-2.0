@@ -134,10 +134,6 @@ h1 {
   color: var(--color-h1);
 }
 
-h2 a {
-  color: inherit;
-}
-
 p,
 ul {
   color: var(--color-text);
