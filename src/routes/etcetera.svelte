@@ -41,7 +41,7 @@
     </li>
   </ul>
 
-  <p>This webpage features:</p>
+  <p>This website features:</p>
   <ul>
     <li>
       <a href="https://svelte.dev" rel="external" target="_blank">svelte</a>
