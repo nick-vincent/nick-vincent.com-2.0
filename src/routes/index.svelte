@@ -7,6 +7,7 @@
 </svelte:head>
 
 <PageTransition>
+  <img alt="Nick Vincent" src="/nick-vincent.jpg" width="640" height="640" />
   <h1>Nick Vincent</h1>
   <p>
     Fluent in both design&nbsp;&&nbsp;code<br />
@@ -20,5 +21,13 @@
 <style>
   p {
     margin: 0;
+  }
+
+  img {
+    display: block;
+    width: calc(50% - 0.5em);
+    height: auto;
+    margin-bottom: 0.5em;
+    border-radius: 50%;
   }
 </style>
