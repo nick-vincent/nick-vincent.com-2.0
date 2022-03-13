@@ -3,8 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Nick Vincent</title>
-  <meta name="description" content="Fluent in design and code" />
+  <title>Nick Vincent: Fluent in design and code</title>
 </svelte:head>
 
 <PageTransition>

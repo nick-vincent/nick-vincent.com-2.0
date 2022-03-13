@@ -15,7 +15,6 @@
 
 <svelte:head>
   <title>Nick Vincent: Etcetera</title>
-  <meta name="description" content="Fluent in design and code" />
 </svelte:head>
 
 <DarkMode bind:theme />

@@ -4,7 +4,6 @@
 
 <svelte:head>
   <title>Nick Vincent: Expertise</title>
-  <meta name="description" content="Fluent in design and code" />
 </svelte:head>
 
 <PageTransition>
