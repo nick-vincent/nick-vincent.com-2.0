@@ -39,16 +39,16 @@
     height: auto;
     border-radius: 50%;
     transform-origin: center;
-    transition: transform 1s var(--easing-standard), opacity var(--color-transition);
+    transition: transform 0.5s var(--easing-standard), opacity var(--color-transition);
   }
 
   .image-link:focus-visible img {
-    transform: scale(1.05) rotate(10deg);
+    transform: scale(1.05) rotate(15deg);
   }
 
   @media (hover: hover) {
     .image-link:hover img {
-      transform: scale(1.05) rotate(10deg);
+      transform: scale(1.05) rotate(15deg);
     }
   }
 </style>
