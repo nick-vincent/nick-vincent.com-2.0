@@ -15,18 +15,19 @@
   <MenuToggle bind:open={$navOpen} />
   <nav class:navOpen={$navOpen}>
     <ul>
-      <li
-        class="home"
-        class:active={$page.url.pathname === '/'}
-        on:click={() => ($navOpen = false)}
-      >
-        <a sveltekit:prefetch href="/">Nick Vincent</a>
+      <li class="home">
+        <a
+          href="/"
+          sveltekit:prefetch
+          class:active={$page.url.pathname === '/'}
+          on:click={() => ($navOpen = false)}>Nick Vincent</a
+        >
       </li>
       {#each navItems as item}
         <li>
           <a
-            sveltekit:prefetch
             href={item.href}
+            sveltekit:prefetch
             class:active={$page.url.pathname === item.href}
             on:click={() => ($navOpen = false)}>{item.text}</a
           >
@@ -80,6 +81,7 @@
     display: inline-block;
     font-weight: 600;
     letter-spacing: -0.025em;
+    opacity: var(--receded-opacity);
     transition: transform var(--duration) var(--easing-standard),
       opacity var(--duration) var(--easing-standard),
       visibility var(--duration) var(--easing-standard), var(--dom-x-ray-transition);
@@ -89,29 +91,20 @@
     display: none;
   }
 
+  a.active {
+    opacity: 1;
+  }
+
   .home a {
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  .home a.active {
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    font-weight: 700;
-    color: var(--color-h1);
     transform: scale(0.95);
-    transform-origin: center;
-  }
-
-  .home:not(.active) a {
-    pointer-events: auto;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-  }
-
-  a {
-    opacity: var(--receded-opacity);
-  }
-
-  a.active {
-    opacity: 1;
   }
 
   nav:focus-within {
@@ -124,7 +117,6 @@
   }
 
   .home a:focus-visible {
-    opacity: 1;
     transform: scale(1.05);
   }
 
@@ -143,7 +135,6 @@
     }
 
     .home a:hover {
-      opacity: 1;
       transform: scale(1.05);
     }
   }
@@ -192,17 +183,14 @@
       font-size: 1.25em;
     }
 
-    nav.navOpen .home a,
-    nav.navOpen .home.active a {
+    .home a {
       opacity: 1;
-      visibility: visible;
     }
 
-    nav:not(.navOpen) a,
-    nav:not(.navOpen) .home a {
-      pointer-events: none;
-      opacity: 0;
-      visibility: hidden;
+    nav.navOpen .home a.active {
+      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
     }
   }
 </style>
