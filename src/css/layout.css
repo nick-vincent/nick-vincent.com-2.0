@@ -7,6 +7,10 @@
   transition: var(--dom-x-ray-transition);
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
