@@ -39,13 +39,12 @@
 <style>
   nav {
     --duration: 0.5s;
-    --easing: var(--easing-standard);
-    --receded-opacity: 0.5;
     padding-bottom: 1em;
     margin-bottom: 2em;
     border-bottom: 0.1em solid var(--color-line);
-    transition: transform var(--duration) var(--easing), opacity var(--duration) var(--easing),
-      visibility var(--duration) var(--easing), var(--dom-x-ray-transition);
+    transition: transform var(--duration) var(--easing-standard),
+      opacity var(--duration) var(--easing-standard),
+      visibility var(--duration) var(--easing-standard), var(--dom-x-ray-transition);
   }
 
   @media print {
@@ -81,8 +80,9 @@
   a {
     display: inline-block;
     font-weight: 600;
-    transition: transform var(--duration) var(--easing), opacity var(--duration) var(--easing),
-      visibility var(--duration) var(--easing), var(--dom-x-ray-transition);
+    transition: transform var(--duration) var(--easing-standard),
+      opacity var(--duration) var(--easing-standard),
+      visibility var(--duration) var(--easing-standard), var(--dom-x-ray-transition);
   }
 
   a::after {
@@ -169,9 +169,10 @@
       opacity: 1;
       visibility: visible;
       transform: scale(1);
-      transition: transform var(--duration) var(--easing) var(--duration),
-        opacity var(--duration) var(--easing) var(--duration),
-        visibility var(--duration) var(--easing) var(--duration), var(--dom-x-ray-transition);
+      transition: transform var(--duration) var(--easing-standard) var(--duration),
+        opacity var(--duration) var(--easing-standard) var(--duration),
+        visibility var(--duration) var(--easing-standard) var(--duration),
+        var(--dom-x-ray-transition);
     }
 
     ul {

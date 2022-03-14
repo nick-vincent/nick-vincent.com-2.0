@@ -1,24 +1,25 @@
 :root {
   --light-color-bg: #f8faff;
-  --light-color-text: #223344;
-  --light-color-h1: #223344;
-  --light-color-link: #3388cc;
-  --light-color-date: rgba(34, 51, 68, 0.75);
+  --light-color-text: #353a4a;
+  --light-color-heading: #353a4a;
+  --light-color-link: #5e83ba;
+  --light-color-date: rgba(38, 69, 100, 0.5);
   --light-color-line-rgb: 0, 59, 137;
-  --light-color-line: rgba(var(--light-color-line-rgb), 0.25);
-  --light-color-bullet: rgba(0, 59, 137, 0.35);
-  --light-color-arrow: rgba(0, 59, 137, 0.35);
+  --light-color-line: rgba(var(--light-color-line-rgb), 0.1);
+  --light-color-bullet: rgba(0, 59, 137, 0.25);
+  --light-color-arrow: rgba(0, 59, 137, 0.25);
   --light-image-filter: none;
+  --light-receded-opacity: 0.7;
   --light-gradient-opacity: 0;
   --light-gradient-bg: radial-gradient(
     circle farthest-corner at top center,
     var(--light-color-bg) 0,
-    #b0c0f0 100%
+    #cad5f8 100%
   );
 
   --dark-color-bg: #171a1f;
   --dark-color-text: #d0d4e1;
-  --dark-color-h1: #ffffff;
+  --dark-color-heading: #ffffff;
   --dark-color-link: #5ea7ff;
   --dark-color-date: #5e6d79;
   --dark-color-line-rgb: 51, 102, 153;
@@ -26,6 +27,7 @@
   --dark-color-bullet: #3f4c59;
   --dark-color-arrow: #3f4c59;
   --dark-image-filter: grayscale(20%);
+  --dark-receded-opacity: 0.5;
   --dark-gradient-opacity: 0;
   --dark-gradient-bg: radial-gradient(
     circle farthest-corner at bottom center,
@@ -35,7 +37,7 @@
 
   --color-bg: var(--light-color-bg);
   --color-text: var(--light-color-text);
-  --color-h1: var(--light-color-h1);
+  --color-heading: var(--light-color-heading);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
   --color-line-rgb: var(--light-color-line-rgb);
@@ -43,6 +45,7 @@
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
   --image-filter: var(--light-image-filter);
+  --receded-opacity: var(--light-receded-opacity);
   --light-gradient-opacity: 1;
 }
 
@@ -50,7 +53,7 @@
   :root {
     --color-bg: var(--dark-color-bg);
     --color-text: var(--dark-color-text);
-    --color-h1: var(--dark-color-h1);
+    --color-heading: var(--dark-color-heading);
     --color-link: var(--dark-color-link);
     --color-date: var(--dark-color-date);
     --color-line-rgb: var(--dark-color-line-rgb);
@@ -58,6 +61,7 @@
     --color-bullet: var(--dark-color-bullet);
     --color-arrow: var(--dark-color-arrow);
     --image-filter: var(--dark-image-filter);
+    --receded-opacity: var(--dark-receded-opacity);
     --light-gradient-opacity: 0;
     --dark-gradient-opacity: 1;
   }
@@ -66,7 +70,7 @@
 .light {
   --color-bg: var(--light-color-bg);
   --color-text: var(--light-color-text);
-  --color-h1: var(--light-color-h1);
+  --color-heading: var(--light-color-heading);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
   --color-line-rgb: var(--light-color-line-rgb);
@@ -74,6 +78,7 @@
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
   --image-filter: var(--light-image-filter);
+  --receded-opacity: var(--light-receded-opacity);
   --light-gradient-opacity: 1;
   --dark-gradient-opacity: 0;
 }
@@ -81,7 +86,7 @@
 .dark {
   --color-bg: var(--dark-color-bg);
   --color-text: var(--dark-color-text);
-  --color-h1: var(--dark-color-h1);
+  --color-heading: var(--dark-color-heading);
   --color-link: var(--dark-color-link);
   --color-date: var(--dark-color-date);
   --color-line-rgb: var(--dark-color-line-rgb);
@@ -89,6 +94,7 @@
   --color-bullet: var(--dark-color-bullet);
   --color-arrow: var(--dark-color-arrow);
   --image-filter: var(--dark-image-filter);
+  --receded-opacity: var(--dark-receded-opacity);
   --light-gradient-opacity: 0;
   --dark-gradient-opacity: 1;
 }
@@ -97,7 +103,7 @@
   :root {
     --color-bg: white;
     --color-text: black;
-    --color-h1: black;
+    --color-heading: black;
     --color-link: black;
     --color-date: black;
     --color-line-rgb: 0, 0, 0;
@@ -105,6 +111,7 @@
     --color-bullet: black;
     --color-arrow: black;
     --image-filter: none;
+    --receded-opacity: 0;
     --light-gradient-opacity: 0;
     --dark-gradient-opacity: 0;
   }
@@ -130,8 +137,9 @@ body::after {
   background-image: var(--dark-gradient-bg);
 }
 
-h1 {
-  color: var(--color-h1);
+h1,
+h2 {
+  color: var(--color-heading);
 }
 
 p,
