@@ -38,7 +38,7 @@
     background: none;
   }
 
-  button:focus {
+  button:focus-visible {
     opacity: 1;
   }
 
