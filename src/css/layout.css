@@ -19,6 +19,7 @@ body {
   min-height: 100%;
   padding: 2em 1em 4em;
   margin: 0 auto;
+  overflow-y: scroll;
 }
 
 @media (max-width: 480px) {
