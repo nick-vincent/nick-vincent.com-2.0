@@ -74,12 +74,12 @@
     flex: 1 0 100%;
     font-size: 2em;
     line-height: 1.5em;
-    letter-spacing: -0.025em;
   }
 
   a {
     display: inline-block;
     font-weight: 600;
+    letter-spacing: -0.025em;
     transition: transform var(--duration) var(--easing-standard),
       opacity var(--duration) var(--easing-standard),
       visibility var(--duration) var(--easing-standard), var(--dom-x-ray-transition);
