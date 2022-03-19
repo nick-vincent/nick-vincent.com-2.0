@@ -21,6 +21,7 @@
 </PageTransition>
 
 <style>
+  h1,
   p {
     margin: 0;
   }
