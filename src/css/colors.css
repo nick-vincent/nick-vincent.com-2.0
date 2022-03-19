@@ -1,8 +1,8 @@
 :root {
-  --light-color-bg: #f8faff;
-  --light-color-text: #353a4a;
-  --light-color-heading: #353a4a;
-  --light-color-link: #5e83ba;
+  --light-color-bg: #f9faff;
+  --light-color-text: #252730;
+  --light-color-heading: #292f3d;
+  --light-color-link: #4f73aa;
   --light-color-date: rgba(38, 69, 100, 0.5);
   --light-color-line-rgb: 0, 59, 137;
   --light-color-line: rgba(var(--light-color-line-rgb), 0.1);
@@ -14,12 +14,12 @@
   --light-gradient-bg: radial-gradient(
     circle farthest-corner at top center,
     var(--light-color-bg) 0,
-    #cad5f8 100%
+    #b4c6e6 100%
   );
 
   --dark-color-bg: #171a1f;
-  --dark-color-text: #d0d4e1;
-  --dark-color-heading: #ffffff;
+  --dark-color-text: #babfce;
+  --dark-color-heading: #dfe4f0;
   --dark-color-link: #5ea7ff;
   --dark-color-date: #5e6d79;
   --dark-color-line-rgb: 51, 102, 153;
