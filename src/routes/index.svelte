@@ -7,21 +7,30 @@
 </svelte:head>
 
 <PageTransition>
-  <a href="/nick-vincent.jpg" class="image-link" target="_blank"
-    ><img alt="Nick Vincent" src="/nick-vincent.jpg" width="640" height="640" /></a
-  >
-  <h1>Nick Vincent</h1>
-  <p>
-    Fluent in both design&nbsp;&&nbsp;code<br />
-    Prefers work to speak&nbsp;for&nbsp;itself<br />
-    <a rel="external" target="_blank" href="mailto:the.nick.vincent@gmail.com"
-      >the.nick.vincent@gmail.com</a
+  <div>
+    <a href="/nick-vincent.jpg" class="image-link" target="_blank"
+      ><img alt="Nick Vincent" src="/nick-vincent.jpg" width="640" height="640" /></a
     >
-  </p>
+    <h1>Nick Vincent</h1>
+    <p>
+      Fluent in both design&nbsp;&&nbsp;code<br />
+      Prefers work to speak&nbsp;for&nbsp;itself<br />
+      <a rel="external" target="_blank" href="mailto:the.nick.vincent@gmail.com"
+        >the.nick.vincent@gmail.com</a
+      >
+    </p>
+  </div>
 </PageTransition>
 
 <style>
-  h1,
+  div {
+    text-align: center;
+  }
+
+  h1 {
+    margin: -0.125em 0 0;
+  }
+
   p {
     margin: 0;
   }
