@@ -59,8 +59,9 @@
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
-    column-gap: 1em;
+    column-gap: 0.75em;
     font-size: 0.75em;
   }
 
@@ -76,6 +77,7 @@
     flex: 1 0 100%;
     font-size: 2em;
     line-height: 1.5em;
+    text-align: center;
   }
 
   a {
