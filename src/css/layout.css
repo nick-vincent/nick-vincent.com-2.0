@@ -3,17 +3,17 @@
 *::before {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  outline: 1px solid rgba(255, 105, 180, 0) !important;
+  outline: 1px solid rgba(255, 105, 180, 0);
   transition: var(--dom-x-ray-transition);
 }
 
 html {
+  display: flex;
   min-height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   max-width: 18em;
   min-height: 100%;
   padding: 2em 1em 4em;
@@ -23,6 +23,8 @@ body {
 
 @media (max-width: 480px) {
   body {
+    display: flex;
+    flex-direction: column;
     padding: 4em 1em;
   }
 }
