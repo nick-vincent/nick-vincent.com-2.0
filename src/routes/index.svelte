@@ -21,11 +21,7 @@
 </PageTransition>
 
 <style>
-  h1 {
-    margin: -0.125em 0 0;
-    text-align: center;
-  }
-
+  h1,
   p {
     margin: 0;
     text-align: center;
@@ -36,6 +32,8 @@
     width: fit-content;
     margin: 0 auto;
     border-radius: 50%;
+    border: 0.1em solid var(--color-line);
+    transition: transform 0.5s var(--easing-standard), var(--dom-x-ray-transition);
   }
 
   .image-link::after {
@@ -43,20 +41,18 @@
   }
 
   img {
-    display: inline-block;
+    display: block;
     width: 8em;
     height: auto;
     border-radius: 50%;
-    transform-origin: center;
-    transition: transform 0.5s var(--easing-standard), opacity var(--color-transition);
   }
 
-  .image-link:focus-visible img {
+  .image-link:focus-visible {
     transform: scale(1.05) rotate(15deg);
   }
 
   @media (hover: hover) {
-    .image-link:hover img {
+    .image-link:hover {
       transform: scale(1.05) rotate(15deg);
     }
   }
