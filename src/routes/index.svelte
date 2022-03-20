@@ -33,7 +33,7 @@
     margin: 0 auto;
     border-radius: 50%;
     border: 0.1em solid var(--color-line);
-    transition: transform 0.5s var(--easing-standard), var(--dom-x-ray-transition);
+    transition: transform 1s var(--easing-standard), var(--dom-x-ray-transition);
   }
 
   .image-link::after {
