@@ -27,6 +27,7 @@
 
 <style>
   main {
+    padding-top: 2em;
     flex: 1 0 100%;
   }
 </style>

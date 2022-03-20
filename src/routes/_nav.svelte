@@ -41,7 +41,6 @@
   nav {
     --duration: 0.5s;
     padding-bottom: 1em;
-    margin-bottom: 2em;
     border-bottom: 0.1em solid var(--color-line);
     transition: transform var(--duration) var(--easing-standard),
       opacity var(--duration) var(--easing-standard),
