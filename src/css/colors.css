@@ -1,5 +1,6 @@
 :root {
-  --light-color-bg: #f9faff;
+  --light-color-bg-highlight: #f9faff;
+  --light-color-bg-shadow: #b4c6e6;
   --light-color-text: #252730;
   --light-color-heading: #292f3d;
   --light-color-link: #4f73aa;
@@ -11,13 +12,26 @@
   --light-image-filter: none;
   --light-receded-opacity: 0.7;
   --light-gradient-opacity: 0;
-  --light-gradient-bg: radial-gradient(
-    circle farthest-corner at top center,
-    var(--light-color-bg) 0,
-    #b4c6e6 100%
+  --light-body-bg-image: radial-gradient(
+    circle farthest-corner at 50% 0,
+    var(--light-color-bg-highlight) 0,
+    var(--light-color-bg-shadow) 100%
   );
 
-  --dark-color-bg: #171a1f;
+  --light-nav-bg-image: radial-gradient(
+      ellipse 50% 1em at 50% 100%,
+      var(--light-color-line) 0,
+      rgba(var(--light-color-line-rgb), 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(var(--light-color-line-rgb), 0) 0,
+      var(--light-color-line) 50%,
+      rgba(var(--light-color-line-rgb), 0) 100%
+    );
+
+  --dark-color-bg-highlight: #171a1f;
+  --dark-color-bg-shadow: #080b10;
   --dark-color-text: #babfce;
   --dark-color-heading: #dfe4f0;
   --dark-color-link: #5ea7ff;
@@ -27,15 +41,26 @@
   --dark-color-bullet: #3f4c59;
   --dark-color-arrow: #3f4c59;
   --dark-image-filter: grayscale(20%);
-  --dark-receded-opacity: 0.5;
+  --dark-receded-opacity: 0.6;
   --dark-gradient-opacity: 0;
-  --dark-gradient-bg: radial-gradient(
-    circle farthest-corner at bottom center,
-    var(--dark-color-bg) 0,
-    #080b10 100%
+  --dark-body-bg-image: radial-gradient(
+    circle farthest-corner at 50% 100%,
+    var(--dark-color-bg-highlight) 0,
+    var(--dark-color-bg-shadow) 100%
   );
+  --dark-nav-bg-image: radial-gradient(
+      ellipse 50% 1em at 50% 100%,
+      var(--dark-color-line) 0,
+      rgba(var(--dark-color-line-rgb), 0) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(var(--dark-color-line-rgb), 0) 0,
+      var(--dark-color-line) 50%,
+      rgba(var(--dark-color-line-rgb), 0) 100%
+    );
 
-  --color-bg: var(--light-color-bg);
+  --color-bg: var(--light-color-bg-highlight);
   --color-text: var(--light-color-text);
   --color-heading: var(--light-color-heading);
   --color-link: var(--light-color-link);
@@ -51,7 +76,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: var(--dark-color-bg);
+    --color-bg: var(--dark-color-bg-highlight);
     --color-text: var(--dark-color-text);
     --color-heading: var(--dark-color-heading);
     --color-link: var(--dark-color-link);
@@ -68,7 +93,7 @@
 }
 
 .light {
-  --color-bg: var(--light-color-bg);
+  --color-bg: var(--light-color-bg-highlight);
   --color-text: var(--light-color-text);
   --color-heading: var(--light-color-heading);
   --color-link: var(--light-color-link);
@@ -84,7 +109,7 @@
 }
 
 .dark {
-  --color-bg: var(--dark-color-bg);
+  --color-bg: var(--dark-color-bg-highlight);
   --color-text: var(--dark-color-text);
   --color-heading: var(--dark-color-heading);
   --color-link: var(--dark-color-link);
@@ -122,19 +147,14 @@ html {
   background-color: var(--color-bg);
 }
 
-body::before,
-body::after {
-  opacity: 0;
-}
-
 body::before {
   opacity: var(--light-gradient-opacity);
-  background-image: var(--light-gradient-bg);
+  background-image: var(--light-body-bg-image);
 }
 
 body::after {
   opacity: var(--dark-gradient-opacity);
-  background-image: var(--dark-gradient-bg);
+  background-image: var(--dark-body-bg-image);
 }
 
 h1,

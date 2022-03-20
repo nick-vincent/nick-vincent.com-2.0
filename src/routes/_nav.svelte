@@ -40,11 +40,40 @@
 <style>
   nav {
     --duration: 0.5s;
+    position: relative;
     padding-bottom: 1em;
-    border-bottom: 0.1em solid var(--color-line);
     transition: transform var(--duration) var(--easing-standard),
       opacity var(--duration) var(--easing-standard),
       visibility var(--duration) var(--easing-standard), var(--dom-x-ray-transition);
+  }
+
+  @media (min-width: 481px) {
+    nav::before,
+    nav::after {
+      content: '';
+      pointer-events: none;
+      z-index: 0;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: top left, bottom left;
+      background-size: 100% 100%, 100% 0.1em;
+      transition: opacity var(--color-transition), var(--dom-x-ray-transition);
+    }
+
+    nav::before {
+      opacity: var(--light-gradient-opacity);
+      background-image: var(--light-nav-bg-image);
+    }
+
+    nav::after {
+      opacity: var(--dark-gradient-opacity);
+      background-image: var(--dark-nav-bg-image);
+    }
   }
 
   @media print {
