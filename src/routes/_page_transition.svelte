@@ -1,6 +1,6 @@
 <script>
-  import { scale } from 'svelte/transition';
-  import { cubicIn, cubicOut } from 'svelte/easing';
+  import { fly } from 'svelte/transition';
+  import { quartIn, quartOut } from 'svelte/easing';
   import { page } from '$app/stores';
 
   import { navOpen } from '../js/stores.js';
@@ -13,8 +13,8 @@
     class="page"
     class:isHome
     class:navOpen={$navOpen}
-    in:scale={{ duration: 500, delay: 500, opacity: 0, start: 0.95, easing: cubicOut }}
-    out:scale={{ duration: 250, opacity: 0, start: 0.95, easing: cubicIn }}
+    in:fly={{ duration: 500, delay: 500, opacity: 0, y: -20, easing: quartOut }}
+    out:fly={{ duration: 250, opacity: 0, y: 20, easing: quartIn }}
   >
     <slot />
   </div>
