@@ -1,25 +1,26 @@
 :root {
-  --light-color-bg-highlight: #f9faff;
-  --light-color-bg-shadow: #b4c6e6;
-  --light-color-text: #252730;
-  --light-color-heading: #292f3d;
-  --light-color-link: #4f73aa;
-  --light-color-date: rgba(38, 69, 100, 0.5);
-  --light-color-line-rgb: 0, 59, 137;
+  --light-color-bg-highlight: #f8faff;
+  --light-color-bg-shadow: #b0c0f0;
+  --light-color-text: rgba(0, 0, 0, 0.65);
+  --light-color-h1: rgba(0, 0, 0, 0.7);
+  --light-color-h2: rgba(40, 67, 94, 0.6);
+  --light-color-h3: rgba(0, 0, 0, 0.7);
+  --light-color-link: #4b71aa;
+  --light-color-date: rgba(40, 67, 94, 0.65);
+  --light-color-line-rgb: 40, 67, 94;
   --light-color-line: rgba(var(--light-color-line-rgb), 0.1);
-  --light-color-bullet: rgba(0, 59, 137, 0.25);
-  --light-color-arrow: rgba(0, 59, 137, 0.25);
+  --light-color-bullet: rgba(40, 67, 94, 0.5);
+  --light-color-arrow: rgba(40, 67, 94, 0.35);
   --light-image-filter: none;
-  --light-receded-opacity: 0.7;
   --light-gradient-opacity: 0;
   --light-body-bg-image: radial-gradient(
     circle farthest-corner at 50% 0,
-    var(--light-color-bg-highlight) 0,
+    var(--light-color-bg-highlight) 50%,
     var(--light-color-bg-shadow) 100%
   );
 
-  --light-nav-bg-image: radial-gradient(
-      ellipse 50% 1em at 50% 100%,
+  --light-line-bg-image: radial-gradient(
+      ellipse 50% 1em at 50% 0%,
       var(--light-color-line) 0,
       rgba(var(--light-color-line-rgb), 0) 100%
     ),
@@ -32,24 +33,25 @@
 
   --dark-color-bg-highlight: #171a1f;
   --dark-color-bg-shadow: #080b10;
-  --dark-color-text: #babfce;
-  --dark-color-heading: #dfe4f0;
+  --dark-color-text: rgba(255, 255, 255, 0.65);
+  --dark-color-h1: rgba(255, 255, 255, 0.9);
+  --dark-color-h2: rgba(121, 156, 200, 0.75);
+  --dark-color-h3: rgba(255, 255, 255, 0.9);
   --dark-color-link: #5ea7ff;
-  --dark-color-date: #5e6d79;
+  --dark-color-date: rgba(121, 156, 200, 0.75);
   --dark-color-line-rgb: 51, 102, 153;
   --dark-color-line: rgba(var(--dark-color-line-rgb), 0.25);
-  --dark-color-bullet: #3f4c59;
-  --dark-color-arrow: #3f4c59;
+  --dark-color-bullet: rgba(121, 156, 200, 0.5);
+  --dark-color-arrow: rgba(121, 156, 200, 0.35);
   --dark-image-filter: grayscale(20%);
-  --dark-receded-opacity: 0.6;
   --dark-gradient-opacity: 0;
   --dark-body-bg-image: radial-gradient(
-    circle farthest-corner at 50% 100%,
-    var(--dark-color-bg-highlight) 0,
+    circle farthest-corner at 50% 0,
+    var(--dark-color-bg-highlight) 50%,
     var(--dark-color-bg-shadow) 100%
   );
-  --dark-nav-bg-image: radial-gradient(
-      ellipse 50% 1em at 50% 100%,
+  --dark-line-bg-image: radial-gradient(
+      ellipse 50% 1em at 50% 0%,
       var(--dark-color-line) 0,
       rgba(var(--dark-color-line-rgb), 0) 100%
     ),
@@ -62,7 +64,9 @@
 
   --color-bg: var(--light-color-bg-highlight);
   --color-text: var(--light-color-text);
-  --color-heading: var(--light-color-heading);
+  --color-h1: var(--light-color-h1);
+  --color-h2: var(--light-color-h2);
+  --color-h3: var(--light-color-h3);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
   --color-line-rgb: var(--light-color-line-rgb);
@@ -70,7 +74,6 @@
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
   --image-filter: var(--light-image-filter);
-  --receded-opacity: var(--light-receded-opacity);
   --light-gradient-opacity: 1;
 }
 
@@ -78,7 +81,9 @@
   :root {
     --color-bg: var(--dark-color-bg-highlight);
     --color-text: var(--dark-color-text);
-    --color-heading: var(--dark-color-heading);
+    --color-h1: var(--dark-color-h1);
+    --color-h2: var(--dark-color-h2);
+    --color-h3: var(--dark-color-h3);
     --color-link: var(--dark-color-link);
     --color-date: var(--dark-color-date);
     --color-line-rgb: var(--dark-color-line-rgb);
@@ -86,7 +91,6 @@
     --color-bullet: var(--dark-color-bullet);
     --color-arrow: var(--dark-color-arrow);
     --image-filter: var(--dark-image-filter);
-    --receded-opacity: var(--dark-receded-opacity);
     --light-gradient-opacity: 0;
     --dark-gradient-opacity: 1;
   }
@@ -95,7 +99,9 @@
 .light {
   --color-bg: var(--light-color-bg-highlight);
   --color-text: var(--light-color-text);
-  --color-heading: var(--light-color-heading);
+  --color-h1: var(--light-color-h1);
+  --color-h2: var(--light-color-h2);
+  --color-h3: var(--light-color-h3);
   --color-link: var(--light-color-link);
   --color-date: var(--light-color-date);
   --color-line-rgb: var(--light-color-line-rgb);
@@ -103,7 +109,6 @@
   --color-bullet: var(--light-color-bullet);
   --color-arrow: var(--light-color-arrow);
   --image-filter: var(--light-image-filter);
-  --receded-opacity: var(--light-receded-opacity);
   --light-gradient-opacity: 1;
   --dark-gradient-opacity: 0;
 }
@@ -111,7 +116,9 @@
 .dark {
   --color-bg: var(--dark-color-bg-highlight);
   --color-text: var(--dark-color-text);
-  --color-heading: var(--dark-color-heading);
+  --color-h1: var(--dark-color-h1);
+  --color-h2: var(--dark-color-h2);
+  --color-h3: var(--dark-color-h3);
   --color-link: var(--dark-color-link);
   --color-date: var(--dark-color-date);
   --color-line-rgb: var(--dark-color-line-rgb);
@@ -119,7 +126,6 @@
   --color-bullet: var(--dark-color-bullet);
   --color-arrow: var(--dark-color-arrow);
   --image-filter: var(--dark-image-filter);
-  --receded-opacity: var(--dark-receded-opacity);
   --light-gradient-opacity: 0;
   --dark-gradient-opacity: 1;
 }
@@ -128,7 +134,9 @@
   :root {
     --color-bg: white;
     --color-text: black;
-    --color-heading: black;
+    --color-h1: black;
+    --color-h2: black;
+    --color-h3: black;
     --color-link: black;
     --color-date: black;
     --color-line-rgb: 0, 0, 0;
@@ -136,7 +144,6 @@
     --color-bullet: black;
     --color-arrow: black;
     --image-filter: none;
-    --receded-opacity: 0;
     --light-gradient-opacity: 0;
     --dark-gradient-opacity: 0;
   }
@@ -157,9 +164,44 @@ body::after {
   background-image: var(--dark-body-bg-image);
 }
 
-h1,
+h1 {
+  color: var(--color-h1);
+}
+
 h2 {
-  color: var(--color-heading);
+  position: relative;
+  color: var(--color-h2);
+}
+
+h2::before,
+h2::after {
+  content: '';
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
+  background-repeat: no-repeat;
+  background-position: top left, bottom left;
+  background-size: 100% 100%, 0% 0.1em;
+  transition: opacity var(--color-transition), var(--dom-x-ray-transition);
+}
+
+h2::before {
+  opacity: var(--light-gradient-opacity);
+  background-image: var(--light-line-bg-image);
+}
+
+h2::after {
+  opacity: var(--dark-gradient-opacity);
+  background-image: var(--dark-line-bg-image);
+}
+
+h3 {
+  color: var(--color-h3);
 }
 
 p,

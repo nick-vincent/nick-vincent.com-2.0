@@ -1,6 +1,6 @@
 a {
   font: inherit;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -10,12 +10,13 @@ button {
   margin: 0;
   background: none;
   font: inherit;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
 }
 
 a::after,
 button::after {
+  pointer-events: none;
   content: '\2192';
   display: inline;
   position: absolute;

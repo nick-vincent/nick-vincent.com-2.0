@@ -1,13 +1,5 @@
-<script>
-  import PageTransition from './_page_transition.svelte';
-</script>
-
-<svelte:head>
-  <title>Nick Vincent: Expertise</title>
-</svelte:head>
-
-<PageTransition>
-  <h1>Expertise</h1>
+<section>
+  <h2>Expertise</h2>
   <p>
     Markup maestro<br />
     Stylesheet sculptor<br />
@@ -28,4 +20,4 @@
     Moonlight motionographer<br />
     Bearer of the brand torch
   </p>
-</PageTransition>
+</section>
