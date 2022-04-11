@@ -12,13 +12,15 @@
 
   $: switchTheme = $theme === 'dark' ? 'light' : 'dark';
 
+  let wrapper;
+
   afterUpdate(() => {
     document.documentElement.classList.add($theme);
     document.documentElement.classList.remove(switchTheme);
   });
 
   onMount(() => {
-    document.documentElement.classList.add('loaded');
+    setTimeout(() => wrapper.classList.remove('loading'), 1);
   });
 </script>
 
@@ -28,16 +30,29 @@
 
 <DarkMode bind:theme={$theme} />
 
-<Header />
-<main>
-  <Expertise />
-  <Experience />
-  <Education />
-</main>
-<Footer />
+<div bind:this={wrapper} class="wrapper loading">
+  <Header />
+  <main>
+    <Expertise />
+    <Experience />
+    <Education />
+  </main>
+  <Footer />
+</div>
 
 <style>
   @media print, (min-width: 50rem) {
+    .wrapper {
+      display: grid;
+      gap: var(--grid-margin);
+    }
+
+    .loading {
+      opacity: 0;
+      filter: blur(1rem);
+      transform: translateY(-1rem);
+    }
+
     main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

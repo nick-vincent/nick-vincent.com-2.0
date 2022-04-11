@@ -23,16 +23,18 @@ button::after {
   font-weight: 300;
   opacity: 0;
   transform: translateX(-0.15em);
-  transition: opacity var(--arrow-transition-duration) var(--easing-accelerate),
-    transform var(--arrow-transition-duration) var(--easing-accelerate), var(--dom-x-ray-transition);
+  transition: var(--dom-x-ray-transition),
+    opacity var(--arrow-transition-duration) var(--easing-accelerate),
+    transform var(--arrow-transition-duration) var(--easing-accelerate);
 }
 
 a:focus-visible::after,
 button:focus-visible::after {
   opacity: 1;
   transform: translateX(0.15em);
-  transition: opacity var(--arrow-transition-duration) var(--easing-decelerate),
-    transform var(--arrow-transition-duration) var(--easing-decelerate), var(--dom-x-ray-transition);
+  transition: var(--dom-x-ray-transition),
+    opacity var(--arrow-transition-duration) var(--easing-decelerate),
+    transform var(--arrow-transition-duration) var(--easing-decelerate);
 }
 
 @media (hover: hover) {
@@ -40,9 +42,9 @@ button:focus-visible::after {
   button:hover::after {
     opacity: 1;
     transform: translateX(0.15em);
-    transition: opacity var(--arrow-transition-duration) var(--easing-decelerate),
-      transform var(--arrow-transition-duration) var(--easing-decelerate),
-      var(--dom-x-ray-transition);
+    transition: var(--dom-x-ray-transition),
+      opacity var(--arrow-transition-duration) var(--easing-decelerate),
+      transform var(--arrow-transition-duration) var(--easing-decelerate);
   }
 }
 
