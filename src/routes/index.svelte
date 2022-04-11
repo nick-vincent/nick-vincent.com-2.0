@@ -47,17 +47,17 @@
       gap: var(--grid-margin);
     }
 
-    .loading {
-      opacity: 0;
-      filter: blur(1rem);
-      transform: translateY(-1rem);
-    }
-
     main {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: max-content;
       gap: var(--grid-margin);
     }
+  }
+
+  .loading {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translateY(-1rem);
   }
 </style>
